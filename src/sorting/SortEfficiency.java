@@ -10,7 +10,7 @@ import databases.SharedStepsDatabase;
      *  below to get you started.
      *
      *  You must store all the sorted arrays into their own database table, and retrieve the values and print them
-     *  Display the execution time for each sorting. Example in below.
+     *  Display the execution time for each sorting - Example below.
      *
      *  You may use any database, such as MongoDB, Oracle MySql, PostgreSQL, etc, to store data and retrieve data.
      *
@@ -36,7 +36,7 @@ public class SortEfficiency {
         numberArray = algo.selectionSort(numberArray);
         long selectionSortExecutionTime = algo.executionTime;
 
-        System.out.println("***SELECTION SORT***\nArray Length: " + numberArray.length + "\nExecution TIme: "
+        System.out.println("***SELECTION SORT***\nArray Length: " + numberArray.length + "\nExecution Time: "
                 + selectionSortExecutionTime + " milliseconds");
 
         // Insert sorted array into a database table, with the desired table name and column name

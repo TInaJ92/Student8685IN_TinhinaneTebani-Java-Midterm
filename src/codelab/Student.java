@@ -6,9 +6,6 @@ public class Student implements Comparable<Student> {
     private String lastName;
     private int numberOfExercisesSolved;
 
-    public Student() {
-    }
-
     public Student(String firstName, String lastName, int numberOfExercisesSolved) {
         this.firstName = firstName;
         this.lastName = lastName;

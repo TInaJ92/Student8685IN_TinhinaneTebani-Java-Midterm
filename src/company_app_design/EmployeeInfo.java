@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class EmployeeInfo {
 
     /** INSTRUCTIONS
-     * This class should implement the Employee interface, but you must do that without using the keyword `implement`
+     *
+     * This class should implement the Employee interface, but you must do that without using the keyword `implements`
      * anywhere in this class.
      *
      * HINT: Take a look at the collections framework diagram. Do you see how a class may implement an interface without
@@ -17,7 +18,7 @@ public class EmployeeInfo {
      *         Implement nested class below (DateConversion)
      *         Use Exception Handling
      *
-     * Once you're done with designing this EmployeeInfo class, go to the Company Employee class to test
+     * Once you're done with designing this EmployeeInfo class, go to the CompanyEmployee class to test
      */
 
     // Make sure to declare and use static, non-static & final fields
@@ -43,17 +44,18 @@ public class EmployeeInfo {
      */
     public static int calculateAnnualBonus(int salary, int performanceGrade) {
         int total = 0;
+
+
         return total;
     }
 
     /*
     You need to implement the logic of this method as such:
 
-        It should calculate employee pension based on salary and numbers of years spent with the company.
-        It should return the total pension amount.
+    It should calculate employee pension based on salary and numbers of years spent with the company.
+    It should return the total pension amount.
 
-        e.g. - Employee will receive 5% of salary as pension for every year they are with the company
-     *
+    e.g. - Employee will receive 5% of salary as pension for every year they are with the company
      */
     public static int calculateEmployeePension() {
         int total = 0;

@@ -3,7 +3,7 @@ package math_problems;
 public class FindLowestDifference {
 
     /** INSTRUCTIONS
-     * Write a method to return the lowest number, that is not shared between the 2 arrays
+     * Write a method to return the lowest number, that is not shared between the 2 arrays below
      * HINT: The lowest number that isn't shared between these arrays is 1
      */
 

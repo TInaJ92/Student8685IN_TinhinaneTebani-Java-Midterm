@@ -5,7 +5,7 @@ import java.sql.*;
 import java.util.*;
 
 /**
- * A class to establish a connection to local or remote JDBC provide methods to interact with that connection.
+ * A class to establish a connection to local or remote JDBC and provide methods to interact with that connection.
  * The object can be used to execute queries, retrieve query results and various other methods
  *
  * Database configurations are set in the `secret.properties` file
@@ -54,7 +54,7 @@ public class SharedStepsDatabase {
 
     private static Properties loadProperties() throws IOException {
         Properties prop = new Properties();
-        InputStream ism = new FileInputStream("src/secret.properties");
+        InputStream ism = new FileInputStream(file);
         prop.load(ism);
         ism.close();
         return prop;
@@ -65,7 +65,7 @@ public class SharedStepsDatabase {
      * @param query The SQL query to be executed
      * @return The resultSet
      */
-    private ResultSet executeQuery(String query) {
+    public ResultSet executeQuery(String query) {
         try {
             statement = connect.createStatement();
             resultSet = statement.executeQuery(query);
@@ -160,7 +160,7 @@ public class SharedStepsDatabase {
             ps.executeUpdate();
 
             ps = connect.prepareStatement(
-                    "CREATE TABLE `" + tableName + "` (`ID` int(11) NOT NULL AUTO_INCREMENT,`sorted_numbers` bigint(20) DEFAULT NULL,  PRIMARY KEY (`ID`) );");
+                    "CREATE TABLE `" + tableName + "` (`ID` int(11) NOT NULL AUTO_INCREMENT,`" + columnName + "` bigint(20) DEFAULT NULL,  PRIMARY KEY (`ID`) );");
             ps.executeUpdate();
 
             for (int n = 0; n < array.length; n++) {

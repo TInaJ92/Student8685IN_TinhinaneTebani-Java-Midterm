@@ -66,6 +66,5 @@ Answer:
 What are linear and non-linear data Structures?
 Answer:
 
-
 Outline different sorting algorithms and their time complexities:
 

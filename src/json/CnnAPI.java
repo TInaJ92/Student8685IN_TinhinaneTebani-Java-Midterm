@@ -24,7 +24,7 @@ public class CnnAPI {
      *  https://newsapi.org/v2/top-headlines?sources=cnn&apiKey=YOUR_API_KEY
      *
      * When you navigate to that full URL, you will be submitting a request, and the response should be CNN's
-     * top headline news.
+     * top headline news at the current moment
      *
      * After retrieving the JSON response, you can go to the following link to validate that it is, in fact, valid JSON:
      *  https://jsonlint.com/

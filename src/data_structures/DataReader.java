@@ -2,7 +2,8 @@ package data_structures;
 
 public class DataReader {
 
-    /**
+    /** INSTRUCTIONS
+     *
      * Create an API to read the .txt file and print it to the console.
      *      HINT: Use BufferedReader class
      * Use try-catch block to handle any exceptions

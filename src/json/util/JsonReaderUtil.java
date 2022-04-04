@@ -23,7 +23,7 @@ public class JsonReaderUtil {
      * Employee class (within the json package) to create an object for each of the employees listed below and assign
      * the corresponding object attributes with the values being returned from the JSON response.
      *
-     *     Your output should be formatted like this:
+     *     Your output should be formatted similar to this:
      *
      *      NAME: "David Lenard"
      *      EMAIL: "Dave@gmail.com"
