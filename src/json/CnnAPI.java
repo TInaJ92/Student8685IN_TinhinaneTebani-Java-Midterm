@@ -58,8 +58,8 @@ public class CnnAPI {
      */
 
     public static void main(String[] args) throws IOException, JSONException {
-        String apiKey = "";
-        String URL = "";
+        String apiKey = "e021b2595ba84a6dae27222593908fd4";
+        String URL = "https://newsapi.org/v2/top-headlines?sources=cnn&apiKey=" + apiKey;
 
         NewsData news = null;
         List<NewsData> newsDataList = new ArrayList<>();
@@ -95,15 +95,26 @@ public class CnnAPI {
         for (int i = 0; i < jsonArray.size() - 1; i++) {
 
             try {
-                JsonObject jsonobject = jsonArray.get(i).getAsJsonObject();
+                JsonObject jsonObject = jsonArray.get(i).getAsJsonObject();
 
-                title = jsonobject.get("title").toString();
-                System.out.println("TITLE: " + title);
+                title = jsonObject.get("title").toString();
+                author = jsonObject.get("author").toString();
+                source = jsonObject.get("source").getAsJsonObject().get("name").toString();
+                description = jsonObject.get("description").toString();
+                url = jsonObject.get("url").toString();
+                urlToImage = jsonObject.get("urlToImage").toString();
+                publishedAt = jsonObject.get("publishedAt").toString();
+                content = jsonObject.get("content").toString();
 
-                // Implement the remaining code, using the provided example within this try block
+                NewsData headline = new NewsData(source, author, title, description, url, urlToImage, publishedAt, content);
+                newsDataList.add(headline);
+
+                System.out.println("TITLE: " + headline.title + "\nAUTHOR: " + headline.author + "\nSOURCE: " + headline.source +
+                        "\nDESCRIPTION: " + headline.description + "\nURL: " + headline.url + "\nURL TO IMAGE: " +
+                        headline.urlToImage + "\nPUBLISHED AT: " + headline.publishedAt + "\nCONTENT: " + headline.content + "\n");
 
             } catch (Exception ex) {
-
+                ex.printStackTrace();
             }
         }
     }
@@ -111,10 +122,24 @@ public class CnnAPI {
     // Inner Class
     private static class NewsData {
 
-        public NewsData(String source, String author, String title, String description, String url, String urlToImage,
-                        String publishedAt, String content) {
+        String source;
+        String author;
+        String title;
+        String description;
+        String url;
+        String urlToImage;
+        String publishedAt;
+        String content;
 
-
+        public NewsData(String source, String author, String title, String description, String url, String urlToImage, String publishedAt, String content) {
+            this.source = source;
+            this.author = author;
+            this.title = title;
+            this.description = description;
+            this.url = url;
+            this.urlToImage = urlToImage;
+            this.publishedAt = publishedAt;
+            this.content = content;
         }
     }
 

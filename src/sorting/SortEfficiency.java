@@ -25,7 +25,7 @@ import databases.SharedStepsDatabase;
 public class SortEfficiency {
 
     public static void main(String[] args) throws Exception {
-        // Declare and initialize an array of a desired length with random numbers
+        // Declare and initialize an array of a desired length with random numbers (Try this with 100, 1000, 10000, 100000)
         int[] numberArray = new int[100];
         insertRandomNumbersIntoArray(numberArray);
 

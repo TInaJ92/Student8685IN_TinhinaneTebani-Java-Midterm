@@ -19,7 +19,7 @@ public class SharedStepsDatabase {
     public static PreparedStatement ps = null;
     public static ResultSet resultSet = null;
     static String systemPath = System.getProperty("user.dir");
-    static String propPath = "\\src\\secret.properties";
+    static String propPath = File.separator + "src" + File.separator + "secret.properties";
     private static final File file = new File(systemPath + propPath);
 
     public SharedStepsDatabase() {
@@ -148,28 +148,44 @@ public class SharedStepsDatabase {
     }
 
     /**
+     * @throws SQLException
+     *
+     * Executes a query, reads & returns the first cell in the first row in the first column
+     *
+     * @param query The query to be executed
+     * @return Single cell value resulting from the query's execution
+     */
+    public Object executeQueryReadOne(String query) throws SQLException {
+        Object result = null;
+        resultSet = executeQuery(query);
+
+        if (resultSet.next()) {
+            result = resultSet.getString(1);
+        }
+
+        return result;
+    }
+
+    /**
      * Inserts an int[] array to a database table
      *
      * @param tableName Name of the table
      * @param columnName Name of the column
      * @param array The array to be inserted
      */
-    public void insertIntegerArray(String tableName, String columnName, int[] array) {
-        try {
-            ps = connect.prepareStatement("DROP TABLE IF EXISTS `" + tableName + "`;");
-            ps.executeUpdate();
+    public void insertIntegerArray(String tableName, String columnName, int[] array) throws SQLException {
 
-            ps = connect.prepareStatement(
-                    "CREATE TABLE `" + tableName + "` (`ID` int(11) NOT NULL AUTO_INCREMENT,`" + columnName + "` bigint(20) DEFAULT NULL,  PRIMARY KEY (`ID`) );");
-            ps.executeUpdate();
+        ps = connect.prepareStatement("DROP TABLE IF EXISTS `" + tableName + "`;");
+        ps.executeUpdate();
 
-            for (int n = 0; n < array.length; n++) {
-                ps = connect.prepareStatement("INSERT INTO " + tableName + " ( " + columnName + " ) VALUES(?)");
-                ps.setInt(1, array[n]);
-                ps.executeUpdate();
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
+        ps = connect.prepareStatement("CREATE TABLE `" + tableName + "` (`ID` int(11) NOT NULL AUTO_INCREMENT,`"
+                + columnName + "` bigint(20) DEFAULT NULL,  PRIMARY KEY (`ID`) );");
+        ps.executeUpdate();
+
+        for (int i : array) {
+            ps = connect.prepareStatement("INSERT INTO " + tableName + " ( " + columnName + " ) VALUES(?)");
+            ps.setInt(1, i);
+            ps.executeUpdate();
         }
     }
 

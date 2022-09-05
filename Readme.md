@@ -2,7 +2,7 @@
 
 
 ### SUBMISSION PROCESS :
-- Deadline: April 10th @ 10AM
+- Deadline: October 16th @ 10AM
 - Clone the project locally
 - Add all required dependencies to the project (these can be found in the `lib` directory)
 - Create your own public repository in GitHub and name it: "<StudentID_FirstName> Java Midterm"
