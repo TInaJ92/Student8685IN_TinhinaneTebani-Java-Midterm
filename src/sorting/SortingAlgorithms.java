@@ -1,6 +1,6 @@
 package sorting;
 
-public class Sorting {
+public class SortingAlgorithms {
 
 
     /** INSTRUCTIONS

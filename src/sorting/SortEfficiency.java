@@ -29,12 +29,12 @@ public class SortEfficiency {
         int[] numberArray = new int[100];
         insertRandomNumbersIntoArray(numberArray);
 
-        Sorting algo = new Sorting();
+        SortingAlgorithms sort = new SortingAlgorithms();
         SharedStepsDatabase ssdb = new SharedStepsDatabase();
 
         // region Selection Sort
-        numberArray = algo.selectionSort(numberArray);
-        long selectionSortExecutionTime = algo.executionTime;
+        numberArray = sort.selectionSort(numberArray);
+        long selectionSortExecutionTime = sort.executionTime;
 
         System.out.println("***SELECTION SORT***\nArray Length: " + numberArray.length + "\nExecution Time: "
                 + selectionSortExecutionTime + " milliseconds");
@@ -53,8 +53,8 @@ public class SortEfficiency {
         randomize(numberArray);
 
         // region Insertion Sort
-        numberArray = algo.insertionSort(numberArray);
-        long insertionSortExecutionTime = algo.executionTime;
+        numberArray = sort.insertionSort(numberArray);
+        long insertionSortExecutionTime = sort.executionTime;
 
         System.out.println("Total Execution Time of " + numberArray.length + " numbers in Insertion Sort took: "
                 + insertionSortExecutionTime + " milliseconds");
