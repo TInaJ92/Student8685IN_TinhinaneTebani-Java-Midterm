@@ -18,20 +18,20 @@ public class UnitTestConnectDB {
         SharedStepsDatabase ssdb = new SharedStepsDatabase();
 
         // region ExecuteQueryReadOne
-//        String query = "SELECT 1 FROM DUAL";
+//        String query = "SELECT * FROM EMPLOYEES.EMPLOYEES LIMIT 10";
 //        String result = ssdb.executeQueryReadOne(query);
 //
 //        System.out.println(result);
-//        // endregion
+        // endregion
 
         // region executeQueryReadAllSingleColumn
 //        String queryTwo = "SELECT * FROM EMPLOYEES.EMPLOYEES LIMIT 10";
-//        List<String> results = ssdb.executeQueryReadAllSingleColumn(queryTwo, 3);
+//        List<String> results = ssdb.executeQueryReadAllSingleColumn(queryTwo, "last_name");
 //
 //        for (String s : results) {
 //            System.out.println(s);
 //        }
-//
+
         // endregion
 
         // region executeQueryReadAll
@@ -49,13 +49,13 @@ public class UnitTestConnectDB {
 //                System.out.println();
 //            }
 //        }
-//
+
         // endregion
 
         // region InsertString
-//        ssdb.insertString("test_insert_string", "test_string", "Sami loves Aamna");
+//        ssdb.insertString("test_insert_string", "test_string", "Testing String Insertion");
 //        System.out.println(ssdb.executeQueryReadAllSingleColumn("SELECT * FROM TEST_INSERT_STRING", 2).get(0));
-//
+
         // endregion
 
         // region insertList
@@ -90,7 +90,7 @@ public class UnitTestConnectDB {
 //            }
 //            System.out.println();
 //        }
-//
+
         // endregion
 
         ssdb.closeResources();

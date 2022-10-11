@@ -9,14 +9,25 @@ programmer, and you will be ready to learn Selenium. Enjoy the process!
 ##### INSTRUCTIONS:
 - Deadline: October 16th @ 10AM
 - Clone the project locally
-- Copy the `lib` folder that can be found in this project, to a location on your local machine that you can easily access.
-Then, add all required dependencies to the project classpath (same as how I showed you in class with Apache/MySQL jars)
+- Locate the `lib` folder found under the root folder. You must add all the .jar files within this folder, 
+to your project classpath (same as how I showed you in class with Apache/MySQL jars)
+    - Go to `File` --> `Project Structure`
+    - On the left side, under `Project Settings`, select `Modules`
+    - Underneath `Name`, click `Dependencies`
+    - Click the `+` sign
+    - Click `1 JARs or directories...`
+    - Locate your project, go into the lib folder, and highlight all the .jars, then click `OK`
+    - Click `Apply` and wait until all of the libraries finish indexing (~10-15 seconds)
+    - Click `Save`
 - Create your own public repository in GitHub and name it: "<StudentID_FirstName> Java Midterm"
 - Once you create your GitHub repo, [click here to add your repo URL](https://docs.google.com/spreadsheets/d/1G4MIoVKm72f0rt6OHWfEvDvpqn1pMiSrtGB_40LgheE/edit?usp=sharing)
-- Point your local repo to your newly created remote repository and verify it is pointing to the correct repo 
-`git remote -v` 
-  - If not, change which remote repo your local is pointing to by using the following command: 
-`git remote set-url <existing remote name> <new repo URL>`
+- Point your local repo to your newly created remote repo. To do this:
+    - Open terminal and enter `git remote -v` to verify the remote repo your local project is currently pointing to.
+    - Enter `git remote set-url origin <your repo URL>`
+    - Enter `git remote -v` again to verify your local repo now points to your remote repo
+    - Enter `git add .`
+    - Enter `git commit -m "Initial Commit"`
+    - Enter `git push -u origin main` or `git push -u origin master`
 - You must be pushing code to the repo on a consistent basis
   - Best practice (in real life), is to push your code every time you solve a problem, make a change, or finish a task.
   You should have 40+ commits in your repo history
