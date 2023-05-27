@@ -49,10 +49,10 @@ programmer on the other side. Enjoy the process!
    - ```
      git push -u origin main
      ``` 
-     or 
-      ```
-      git push -u origin master
-      ```
+     or
+     ```
+     git push -u origin master
+     ```
 
 ### Thing to Know
 1. You should be pushing code to the repo consistently 
