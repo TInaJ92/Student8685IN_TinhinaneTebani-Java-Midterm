@@ -14,9 +14,19 @@ programmer on the other side. Enjoy the process!
 3. Create your own public repository in GitHub and name it: "<StudentID_FirstName> Java Midterm"
 4. Once you create your GitHub repo, [click here to add your repo URL](https://docs.google.com/spreadsheets/d/1iYGPRPeWNxI-btfnRqXEXMjlU9xJNit8aPGjc6aGotw/edit#gid=0)
 5. Point your local repo to your newly created remote repo. To do this:
-   - ```git remote -v``` to verify your remote repo
-   - ```git remote set-url origin <your repo URL>``` to change the repo to your remote repo
-   - ```git remote -v``` to verify your remote repo has changed
+   - Verify your remote repo:
+     - ```
+       git remote -v
+       ```
+     
+   - Change the repo to your remote repo:
+     - ```
+       git remote set-url origin <your repo URL>
+       ```
+   - Verify your remote repo has changed
+     - ```
+       git remote -v
+       ```
 6. Locate the `lib` folder found under the project root.
    - You must add all .jar files found within this directory to your project dependencies
      - `File` &rarr; `Project Structure`
@@ -30,10 +40,19 @@ programmer on the other side. Enjoy the process!
      - Click `Apply` and wait for indexing to complete (~15 secs)
      - Click `Save`
 7. Commit your changes and push to your remote repo
-   - ```git add .```
-   - ```git commit -m "Initial Commit"```
-   - ```git push -u origin main``` or ```git push -u origin master```
-
+   - ```
+     git add .
+     ```
+   - ```
+     git commit -m "Initial Commit"
+     ```
+   - ```
+     git push -u origin main
+     ``` 
+     or 
+      ```
+      git push -u origin master
+      ```
 
 ### Thing to Know
 1. You should be pushing code to the repo consistently 
