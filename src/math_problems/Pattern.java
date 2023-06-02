@@ -10,7 +10,22 @@ public class Pattern {
      *
      */
 
-    public static void main(String[] args) {
+        public static void printPattern() {
+            int number = 100;
 
+            while (number >= 32) {
+                System.out.print(number + ", ");
+
+                if (number >= 90) {
+                    number--;
+                } else if (number >= 70) {
+                    number -= 2;
+                } else {
+                    number -= 3;
+                }
+            }
+        }
+    public static void main(String[] args) {
+        printPattern();
     }
 }
