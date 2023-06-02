@@ -15,5 +15,26 @@ public class Palindrome {
     }
 
     // Implement here
+    public class PalindromeChecker {
+        public static boolean isPalindrome(String str) {
+
+            String cleanStr = str.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+
+
+            String reversedStr = new StringBuilder(cleanStr).reverse().toString();
+            return cleanStr.equals(reversedStr);
+        }
+
+        public static void main(String[] args) {
+            String word = "Racecar";
+            boolean isPalin = isPalindrome(word);
+            if (isPalin) {
+                System.out.println("'" + word + "' is a palindrome.");
+            } else {
+                System.out.println("'" + word + "' is not a palindrome.");
+            }
+        }
+    }
+
 
 }
