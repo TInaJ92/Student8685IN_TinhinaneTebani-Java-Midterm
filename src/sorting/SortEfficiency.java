@@ -64,36 +64,62 @@ public class SortEfficiency {
         randomize(numberArray);
 
         // region Bubble Sort
+        numberArray= sort.bubbleSort(numberArray);
+        long bubbleSortExecutionTime = sort.executionTime;
+        System.out.println("Total Execution Time of " + numberArray.length + " numbers in bubble Sort took: "
+                + bubbleSortExecutionTime + " milliseconds");
 
         // endregion
 
         randomize(numberArray);
 
         // region Merge Sort
+        numberArray= sort.mergeSort(numberArray);
+        long mergeSortExecutionTime = sort.executionTime;
+        System.out.println("Total Execution Time of " + numberArray.length + " numbers in merge Sort took: "
+                + mergeSortExecutionTime + " milliseconds");
+
 
         // endregion
 
         randomize(numberArray);
 
         // region Quick Sort
+        numberArray= sort.quickSort(numberArray);
+        long quickSortExecutionTime = sort.executionTime;
+        System.out.println("Total Execution Time of " + numberArray.length + " numbers in quick Sort took: "
+                + quickSortExecutionTime + " milliseconds");
+
 
         // endregion
 
         randomize(numberArray);
 
         // region Heap Sort
+        numberArray= sort.heapSort(numberArray);
+        long heapSortExecutionTime = sort.executionTime;
+        System.out.println("Total Execution Time of " + numberArray.length + " numbers in heap Sort took: "
+                + heapSortExecutionTime + " milliseconds");
 
         // endregion
 
         randomize(numberArray);
 
         // region Bucket Sort
+        numberArray= sort.bucketSort(numberArray);
+        long bucketSortExecutionTime = sort.executionTime;
+        System.out.println("Total Execution Time of " + numberArray.length + " numbers in bucket Sort took: "
+                + bucketSortExecutionTime + " milliseconds");
 
         // endregion
 
         randomize(numberArray);
 
         // region Shell Sort
+        numberArray= sort.shellSort(numberArray);
+        long shellSortExecutionTime = sort.executionTime;
+        System.out.println("Total Execution Time of " + numberArray.length + " numbers in shell Sort took: "
+                + shellSortExecutionTime + " milliseconds");
 
         // endregion
     }
